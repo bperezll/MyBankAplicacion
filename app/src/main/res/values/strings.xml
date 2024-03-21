@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Bank</string>
+    <string name="last_transactions_title">Last transactions</string>
+    <string name="balance_title">Balance</string>
+    <string name="add_transaction_title">Add transaction</string>
+    <string name="add_new_transaction_fab">Add new transaction</string>
+    <string name="save_transaction_btn">Save transaction</string>
+</resources>

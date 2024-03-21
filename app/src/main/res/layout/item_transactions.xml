@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemContactConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/transactionDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Transaction date"
+        app:layout_constraintTop_toBottomOf="@id/separator"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/transactionAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Transaction amount"
+        app:layout_constraintTop_toBottomOf="@id/transactionDate"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/transactionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Transaction type"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/transactionAmount"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
