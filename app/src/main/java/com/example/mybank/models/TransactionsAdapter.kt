@@ -35,16 +35,15 @@ class TransactionsAdapter(
 
     inner class TransactionsViewHolder(val binding:ItemTransactionsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        @SuppressLint("ResourceAsColor")
         fun render(transactions: Transactions) {
 
             binding.transactionDate.text = transactions.date
             binding.transactionAmount.text = transactions.amount
 
-            if (binding.transactionAmount.text.contains("+")) {
-                binding.transactionAmount.setTextColor(R.color.green)
-            } else if (binding.transactionAmount.text.contains("-")) {
-                binding.transactionAmount.setTextColor(R.color.red)
+            if (transactions.amount.toFloat() >= 0) {
+                binding.transactionAmount.setTextColor(binding.root.context.getColor(R.color.green))
+            } else {
+                binding.transactionAmount.setTextColor(binding.root.context.getColor(R.color.red))
             }
         }
     }
